@@ -12,7 +12,7 @@ workflows:
   version: 2.1
   build:
     jobs:
-      - test:
+      - build:
           filters:
             branches:
               only:
