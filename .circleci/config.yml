@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -7,3 +7,13 @@ jobs:
       - checkout
       - run: flutter doctor
       - run: flutter test 
+
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - main
